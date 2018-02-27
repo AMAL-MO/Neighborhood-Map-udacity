@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head><html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Neighborhood Map Project" content="Map of Riyadh">
+
+    <title> Neighborhood Map Project</title>
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="icon" href="https://seeklogo.com/images/N/new-google-maps-icon-logo-263A01C734-seeklogo.com.png">
+<link rel="stylesheet" href="css/Styles.css">
+</head>
+  </head>
+  <body>
+      <div class="app" id="app">
+          <div class="map" id="map"></div>
+
+      <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                 <div class="sidebar-header">
+                    <h3>Neighborhood Map</h3>
+                    <input class="search" data-bind="textInput:searchTerm, valueUpdate: 'afterkeydown'" placeholder="Search Locations..." >
+                </div>
+                    <ul class="nav flex-column" data-bind="foreach: locationsFilter">
+                       <a href="#"><li class="nav-item text-white location_list" data-bind="text: title, click: $parent.populateAndBounceMarker">
+                        </li></a>
+                </ul>
+            </nav>
+
+            <div id="content">
+
+                <nav class="navbar" >
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+
+
+</div>
+        <script
+        src="js/knockout-3.4.2.js" charset="utf-8">
+    </script>
+
+    <script
+        src="js/jquery-1.12.0.min.js">
+    </script>
+
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+    <script
+        src="js/app.js" charset="utf-8">
+    </script>
+       <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2PAeJRcEgyodhlzKcT4pa1qHEmonxlLM&callback=startApp"
+         onerror="errorHandling()">
+    </script>
+  </body>
+</html>
