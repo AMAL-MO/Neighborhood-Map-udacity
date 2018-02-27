@@ -3,7 +3,7 @@
 
 This is the **Udacity Neighborhood Map Project**. It's intended as a challenge to put together a website from various APIs. This includes making function calls to Google Maps and other location-based services like Foursquare. 
 
-Included is a list of my' favorite restaurants and Cafe around Prince Muhammad Bin Abdulaziz Rd , Riyadh
+Included is a list of my' favorite restaurants and Cafe around Panorama Mall , Riyadh
 
 # How To Use
 
